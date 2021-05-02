@@ -1,0 +1,113 @@
+/Back_End/venv_API
+
+/Front_End/aloc-app
+/Front_End/aloc-app/*
+
+Projeto_IA/projeto_final.ipynb
+
+
+#Front-End
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/Front_End/predict-app/node_modules
+/Front_End/predict-app/.pnp
+/Front_End/predict-app/.pnp.js
+
+# testing
+/Front_End/predict-app/coverage
+
+# production
+/Front_End/predict-app/build
+
+# misc
+/Front_End/predict-app/.DS_Store
+/Front_End/predict-app/.env.local
+/Front_End/predict-app/.env.development.local
+/Front_End/predict-app/.env.test.local
+/Front_End/predict-app/.env.production.local
+
+/Front_End/predict-app/npm-debug.log*
+/Front_End/predict-app/yarn-debug.log*
+/Front_End/predict-app/yarn-error.log*
+
+
+#Back-End
+/Back_End/API/__pycache__/*
+/Back_End/API/__pycache__
+/Back_End/API/.pytest_cache/*
+/Back_End/API/.pytest_cache
+
+
+#Mobile
+
+/Mobile_App/AllocationApp/texto.txt
+
+# OSX
+#
+/Mobile_App/AllocationApp/.DS_Store
+
+# Xcode
+#
+/Mobile_App/AllocationApp/build/
+/Mobile_App/AllocationApp/*.pbxuser
+/Mobile_App/AllocationApp/!default.pbxuser
+/Mobile_App/AllocationApp/*.mode1v3
+/Mobile_App/AllocationApp/!default.mode1v3
+/Mobile_App/AllocationApp/*.mode2v3
+/Mobile_App/AllocationApp/!default.mode2v3
+/Mobile_App/AllocationApp/*.perspectivev3
+/Mobile_App/AllocationApp/!default.perspectivev3
+/Mobile_App/AllocationApp/xcuserdata
+/Mobile_App/AllocationApp/*.xccheckout
+/Mobile_App/AllocationApp/*.moved-aside
+/Mobile_App/AllocationApp/DerivedData
+/Mobile_App/AllocationApp/*.hmap
+/Mobile_App/AllocationApp/*.ipa
+/Mobile_App/AllocationApp/*.xcuserstate
+/Mobile_App/AllocationApp/project.xcworkspace
+
+# Android/IntelliJ
+#
+/Mobile_App/AllocationApp/build/
+/Mobile_App/AllocationApp/.idea
+/Mobile_App/AllocationApp/.gradle
+/Mobile_App/AllocationApp/local.properties
+/Mobile_App/AllocationApp/*.iml
+
+# node.js
+#
+/Mobile_App/AllocationApp/node_modules/
+/Mobile_App/AllocationApp/npm-debug.log
+/Mobile_App/AllocationApp/yarn-error.log
+
+# BUCK
+/Mobile_App/AllocationApp/buck-out/
+/Mobile_App/AllocationApp/\.buckd/
+/Mobile_App/AllocationApp/*.keystore
+/Mobile_App/AllocationApp/!debug.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+/Mobile_App/AllocationApp/*/fastlane/report.xml
+/Mobile_App/AllocationApp/*/fastlane/Preview.html
+/Mobile_App/AllocationApp/*/fastlane/screenshots
+
+# Bundle artifacts
+/Mobile_App/AllocationApp/*.jsbundle
+
+# CocoaPods
+/Mobile_App/AllocationApp/ios/Pods/
+
+# Expo
+/Mobile_App/AllocationApp/.expo/*
+/Mobile_App/AllocationApp/web-build/
+
+
+/Mobile_App/AllocationApp/*.txt

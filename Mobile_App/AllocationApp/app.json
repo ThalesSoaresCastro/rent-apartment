@@ -1,0 +1,17 @@
+{
+  "name": "AllocationApp",
+  "displayName": "AllocationApp",
+  "expo": {
+    "name": "AllocationApp",
+    "slug": "AllocationApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "splash":{
+      "image": "./assets/652.jpg",
+      "resizeMode": "contain",
+      "backgroudColor": "#6a5acd"
+    }
+  }
+}
