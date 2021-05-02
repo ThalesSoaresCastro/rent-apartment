@@ -34,10 +34,18 @@ Projeto_IA/projeto_final.ipynb
 
 
 #Back-End
+
+/Back_End/API/data/postgres/*
+
 /Back_End/API/__pycache__/*
 /Back_End/API/__pycache__
 /Back_End/API/.pytest_cache/*
 /Back_End/API/.pytest_cache
+
+/Back_End/API/database/__pycache__/*
+/Back_End/API/database/__pycache__
+/Back_End/API/database/.pytest_cache/*
+/Back_End/API/database/.pytest_cache
 
 
 #Mobile
