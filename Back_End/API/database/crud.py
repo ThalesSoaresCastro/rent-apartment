@@ -26,3 +26,17 @@ def create_allocation(db: Session, allocation: schemas.Allocation):
     db.commit()
     db.refresh(db_allocation)
     return db_allocation
+
+def get_allocation_value(db:Session):
+    return db.query(models.Allocation.alloc_value).all()
+
+"""
+    0 - São Paulo
+    1 - Porto Alegre
+    2 = Rio de Janeiro
+    3 - Campinas
+    4 - Belo Horizonte
+"""
+
+def get_city_allocation_values(db: Session, opt:int):
+    return db.query(models.Allocation.alloc_value).filter(models.Allocation.city == opt).all()

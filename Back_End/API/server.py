@@ -14,6 +14,8 @@ models.Base.metadata.create_all(bind=engine)
 
 import joblib
 
+import functools as fct
+
 def get_db():
     db = SessionLocal()
     try:
@@ -24,6 +26,9 @@ def get_db():
 
 class Value_Predict(BaseModel):
     values: List[int]
+
+class CityQuery(BaseModel):
+    city: int
 
 app = FastAPI()
 
@@ -89,3 +94,36 @@ async def predition_model(value:Value_Predict, db: Session = Depends(get_db)):
 
 
     return {'prediction': treated_prediction}
+
+median_value = lambda list_values : round(fct.reduce(lambda x,y: x+y,list_values)/len(list_values),2)
+
+@app.get('/median-all-allocation-value')
+async def median_all_allocation_value(db: Session = Depends(get_db)):
+   
+    value = list(crud.get_allocation_value(db=db))
+    list_values = [i[0] for i in value]
+    alloc_median = median_value(list_values) #round(fct.reduce(lambda x,y: x+y,list_values)/len(value),2)
+
+    if len(value) <=0:
+        raise HTTPException(status_code=404, detail="Não existem registros para se calcular a média!")
+
+    return {
+            "median_all_allocation_value":alloc_median,
+            "list_all_allocation_values":list_values
+            }
+
+
+
+@app.post('/city-median-allocation/')
+async def median_city_allocation_values(value:CityQuery, db: Session = Depends(get_db)):
+    
+    values_city = crud.get_city_allocation_values(db=db, opt=value.city)
+    list_city_values = [i[0] for i in values_city]    
+    
+    median_values = median_value(list_city_values)
+    
+    return{
+        'city_query':value.city,
+        'values_allocation_city': list_city_values,
+        'median_city_values':median_values,
+    } 

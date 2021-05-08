@@ -40,3 +40,25 @@ def test_type_params_error():
         json=arr   
     ) 
     assert response.status_code == 422
+
+def test_median_allocation_value():
+    response = client.get(
+        '/median-allocation-value/',
+        headers={"X-Token":"coneofsilence"}
+    ) 
+
+    assert response.status_code == 200
+
+def test_median_city_allocation_value():
+    city = 0
+    
+    dict_city = {
+        'city':city
+    }
+    response = client.get(
+        '/median-allocation-value/',
+        headers={"X-Token":"coneofsilence"},
+        json=dict_city
+    ) 
+
+    assert response.status_code == 200
